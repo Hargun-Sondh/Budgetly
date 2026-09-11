@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+<header>
+<p class="eyebrow">PERSONAL FINANCE</p>
+<h1>Budgetly</h1>
+<p class="subtitle">Keep track of your income and spending in one place.</p>
+</header>
+
+<section class="summary">
+<div class="summary-card"><p>Total Income</p><h2 id="totalIncome">₹0</h2></div>
+<div class="summary-card"><p>Total Expense</p><h2 id="totalExpense">₹0</h2></div>
+<div class="summary-card"><p>Money Left</p><h2 id="moneyLeft">₹0</h2></div>
+</section>
+
+<section class="add-section">
+<div class="section-title"><p class="eyebrow">ADD TRANSACTION</p><h2>New transaction</h2></div>
+<div class="form">
+<input id="description" type="text" placeholder="Description e.g. Salary, Food">
+<input id="amount" type="number" min="1" placeholder="Amount (₹)">
+<select id="type"><option value="income">Income</option><option value="expense">Expense</option></select>
+<button id="addBtn">Add Transaction</button>
+</div>
+<p id="error" class="error"></p>
+</section>
+
+<section class="transactions">
+<div class="section-title"><p class="eyebrow">HISTORY</p><h2>Transactions</h2></div>
+<p id="emptyMessage" class="empty">No transactions yet. Add your first one above.</p>
+<div id="transactionList"></div>
+</section>
+
+<button id="clearBtn" class="clear-btn">Clear All Transactions</button>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
