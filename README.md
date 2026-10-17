@@ -1,6 +1,6 @@
 # Budgetly
 
-A simple responsive personal budget tracker built with HTML, CSS and vanilla JavaScript.
+A responsive personal budget tracker built with HTML, CSS and vanilla JavaScript.
 
 ## Features
 - Total income, total expense and remaining balance
@@ -11,11 +11,15 @@ A simple responsive personal budget tracker built with HTML, CSS and vanilla Jav
 - Basic input validation
 - Responsive design
 
-## Tech Stack
-HTML5, CSS3, JavaScript (DOM manipulation and events)
+## Live Demo
+https://budgetly-azure.vercel.app/
 
-## How to run
-Open `index.html` in a browser.
+## Tech Stack
+- HTML5 — page structure
+- CSS3 — styling and responsive design
+- Vanilla JavaScript — application logic and DOM manipulation
+- JavaScript Events — handling user interactions
+- Vercel — deployment and hosting
 
 ## Future improvements
 - LocalStorage persistence
