@@ -1,50 +1,83 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Track income, expenses and your remaining balance with Budgetly.">
-  <title>Budgetly — Personal Finance</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track income, expenses and your remaining balance with Budgetly.">
+    <title>Budgetly — Personal Finance</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="container">
-    <header>
-      <p class="eyebrow">PERSONAL FINANCE</p>
-      <h1>Budgetly</h1>
-      <p class="subtitle">Keep track of your income and spending in one place.</p>
-      <p id="connectionStatus" class="status" role="status">Connecting to your database…</p>
-    </header>
+    <main class="container">
+        <header>
+            <p class="eyebrow">PERSONAL FINANCE</p>
+            <h1>Budgetly</h1>
+            <p class="subtitle">Keep track of your income and spending in one place.</p>
+            <p id="connectionStatus" class="status" role="status">
+                Connecting to your database…
+            </p>
+        </header>
 
-    <section class="summary" aria-label="Budget summary">
-      <div class="summary-card"><p>Total Income</p><h2 id="totalIncome">₹0</h2></div>
-      <div class="summary-card"><p>Total Expense</p><h2 id="totalExpense">₹0</h2></div>
-      <div class="summary-card"><p>Money Left</p><h2 id="moneyLeft">₹0</h2></div>
-    </section>
+        <section class="summary" aria-label="Budget summary">
+            <div class="summary-card">
+                <p>Total Income</p>
+                <h2 id="totalIncome">₹0</h2>
+            </div>
 
-    <section class="add-section">
-      <div class="section-title"><p class="eyebrow">ADD TRANSACTION</p><h2>New transaction</h2></div>
-      <form id="transactionForm" class="form">
-        <input id="description" type="text" maxlength="120" placeholder="Description e.g. Salary, Food" aria-label="Description" required>
-        <input id="amount" type="number" min="0.01" step="0.01" placeholder="Amount (₹)" aria-label="Amount in rupees" required>
-        <select id="type" aria-label="Transaction type">
-          <option value="income">Income</option>
-          <option value="expense">Expense</option>
-        </select>
-        <button id="addBtn" type="submit">Add Transaction</button>
-      </form>
-      <p id="error" class="error" role="alert"></p>
-    </section>
+            <div class="summary-card">
+                <p>Total Expense</p>
+                <h2 id="totalExpense">₹0</h2>
+            </div>
 
-    <section class="transactions">
-      <div class="section-title"><p class="eyebrow">HISTORY</p><h2>Transactions</h2></div>
-      <p id="emptyMessage" class="empty">No transactions yet. Add your first one above.</p>
-      <div id="transactionList"></div>
-    </section>
+            <div class="summary-card">
+                <p>Money Left</p>
+                <h2 id="moneyLeft">₹0</h2>
+            </div>
+        </section>
 
-    <button id="clearBtn" class="clear-btn" type="button">Clear All Transactions</button>
-    <p class="footer-note">Your entries are stored in the connected MongoDB database.</p>
-  </main>
+        <section class="add-section">
+            <div class="section-title">
+                <p class="eyebrow">ADD TRANSACTION</p>
+                <h2>New transaction</h2>
+            </div>
+
+            <form id="transactionForm" class="form">
+                <input id="description" type="text" maxlength="120" placeholder="Description e.g. Salary, Food" aria-label="Description" required>
+                <input id="amount" type="number" min="0.01" step="0.01" placeholder="Amount (₹)" aria-label="Amount in rupees" required>
+                <select id="type" aria-label="Transaction type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button id="addBtn" type="submit">
+                    Add Transaction
+                </button>
+            </form>
+
+            <p id="error" class="error" role="alert"></p>
+        </section>
+
+        <section class="transactions">
+            <div class="section-title">
+                <p class="eyebrow">HISTORY</p>
+                <h2>Transactions</h2>
+            </div>
+
+            <p id="emptyMessage" class="empty">
+                No transactions yet. Add your first one above.
+            </p>
+
+            <div id="transactionList"></div>
+        </section>
+
+        <button id="clearBtn" class="clear-btn" type="button">
+            Clear All Transactions
+        </button>
+
+        <p class="footer-note">
+            Your entries are stored in the connected MongoDB database.
+        </p>
+    </main>
 </body>
 </html>
